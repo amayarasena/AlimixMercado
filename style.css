@@ -1,0 +1,394 @@
+/* =======================================
+ * RESET / GLOBAL
+ * ======================================= */
+body {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* =======================================
+ * TOPO / HEADER
+ * ======================================= */
+header {
+    background: #0f7516;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 0;
+    text-align: center;
+}
+
+.topo {
+    /* Sugestão: o padding horizontal (0%) é incomum, geralmente é um valor fixo ou percentual (ex: 5%) */
+    align-items: center;
+    background-color: #0f7516;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px; /* Espaçamento entre os principais blocos do cabeçalho */
+    justify-content: space-between;
+    padding: 20px 0%; 
+    width: 100%;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Barra de Pesquisa */
+.barra-pesquisa {
+    align-items: center;
+    background: #fff;
+    border: 1px solid #f0871e;
+    border-radius: 5px;
+    display: flex;
+    min-width: 250px; /* Garante um tamanho mínimo */
+    overflow: hidden;
+    width: 30%; /* Reduz a largura para dar espaço aos outros elementos */
+    max-width: 40px;
+}
+
+.barra-pesquisa input {
+    border: none;
+    padding: 8px 10px;
+    width: 100%;
+}
+
+.barra-pesquisa button {
+    background: #f0871e;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px 10px;
+}
+
+.atalhos {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    font-size: 14px; /* Tamanho da fonte para não ocupar muito espaço */
+    gap: 15px; /* Espaço entre Endereço, Login e Carrinho */
+    white-space: nowrap;
+}
+
+.social {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.social img {
+    cursor: pointer;
+    height: 22px;
+    width: 23px;
+}
+
+/* =======================================
+ * MENU
+ * ======================================= */
+nav, .filter-buttons {
+    background: #ea750f;
+    margin-top: 1px;
+    padding: 1px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.filter-buttons button {
+    background: #da7318;
+    border: none;
+    color: #fafafa;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 0 12px;
+    padding: 4px 12px;
+}
+
+.filter-buttons button:hover {
+    color: #c0bdbb;
+}
+
+/* =======================================
+ * BANNER
+ * ======================================= */
+.banner img {
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* =======================================
+ * OFERTAS
+ * (O estilo .item foi padronizado aqui para evitar conflitos)
+ * ======================================= */
+.ofertas {
+    background: #ffffff;
+    text-align: center;
+    width: 100%;
+}
+
+.ofertas h2 {
+    background-color: #ea750f;
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding: 20px 25px;
+}
+
+/* Estilo Base para Itens (Carrossel e Grid) */
+.item {
+    background: #fafafa;
+    border: 1px solid #727272;
+    border-radius: 10px;
+    box-shadow: 0 12px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Adicionado para consistência */
+    color: #000;
+    font-size: 13px; /* Padronizado */
+    height: 230px; /* Altura fixa */
+    min-width: 170px;
+    padding: 10px; /* Padronizado */
+    text-align: center;
+    width: 160px; /* Largura fixa */
+}
+
+.item img {
+    border-radius: 6px; /* Padronizado */
+    display: block;
+    height: 140px; /* Altura fixa para imagem */
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Carrossel */
+.carrosel {
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.carrosel-track {
+    align-items: center;
+    animation: scroll 5s linear infinite;
+    display: flex;
+    gap: 40px;
+}
+
+
+/* =======================================
+ * SEÇÕES: ALIMENTOS, FRUTAS, LIMPEZA (GRID)
+ * ======================================= */
+.alimentos, .frutas, .limpeza {
+    background: #ea750f;
+    margin-top: 20px;
+    /* Configurações para rolagem horizontal */
+    overflow-x: auto; 
+    padding-bottom: 20px;
+    padding-left: 10px; 
+    padding-right: 10px; 
+    text-align: center;
+    white-space: nowrap; 
+}
+
+.alimentos h2, .frutas h2, .limpeza h2 {
+    color: #fff;
+    font-size: 18px;
+    margin: 25px;
+    text-align: left;
+}
+
+/* GRID DE IMAGENS - CONFIGURAÇÃO PADRÃO (DESKTOP) */
+.grid-imagens {
+    display: flex;
+    flex-wrap: nowrap; 
+    gap: 15px; 
+    justify-content: center;
+    margin: 0; 
+    max-width: none;
+    padding: 0;
+}
+
+.grid-imagens .item {
+    /* Sobrescreve a largura do .item para o grid no desktop */
+    min-width: 12%; 
+    max-width: 100px; 
+    padding: 15px; /* Mais padding para o desktop grid */
+    
+    /* Garantir que o item permaneça em uma linha (Desktop) */
+    display: inline-block; 
+    vertical-align: top;
+}
+
+/* =======================================
+ * ANIMAÇÃO
+ * ======================================= */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* =======================================
+ * RESPONSIVIDADE OTIMIZADA
+ * ======================================= */
+
+/* Tablet/Mobile Médio (768px ou menos) - Ajuste no grid-imagens */
+@media (max-width: 768px) {
+    .grid-imagens .item {
+        /* Permite 3 itens por linha se não houver rolagem, mas manteremos o overflow: auto do container */
+        width: calc(33.33% - 15px); 
+    }
+
+}
+
+
+/* Mobile Padrão (600px ou menos) - AJUSTES GERAIS E GRID */
+@media (max-width: 600px) {
+    /* AJUSTES NO TOPO */
+    .topo {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 0%;
+    }
+
+    .logo {
+        font-size: 22px; 
+        margin-bottom: 5px;
+        text-align: center;
+        width: 100%; 
+    }
+    
+    .barra-pesquisa {
+        width: 100%;
+    }
+
+    /* AJUSTES NO MENU */
+    .filter-buttons button {
+        font-size: 12px;
+        margin: 0 5px;
+        padding: 4px 8px;
+    }
+
+    /* BANNER */
+    .banner img {
+        height: 250px; 
+    }
+    
+    /* GRID DE IMAGENS (Seções) - 4 por linha com scroll */
+    .grid-imagens {
+        display: flex;
+        flex-wrap: nowrap; 
+        gap: 10px;
+        overflow-x: auto; 
+        padding-left: 354px;  /* dá espaço antes da primeira imagem */
+        padding-right: 10px; 
+    }
+
+    .grid-imagens .item {
+        /* 4 visíveis com largura fixa para scroll */
+        flex: 0 0 calc(25% - 10px); 
+        min-width: 110px; 
+        max-width: none; /* Remove o limite máximo do desktop */
+        padding: 10px; /* Ajusta o padding */
+    }
+
+        .grid-imagens .item img {
+          width: 100%;
+          height: 120px;
+          /* ajuste para cima ou para baixo */
+          object-fit: contain;
+          display: block;
+    }
+
+
+    .grid-imagens .item p,
+    .grid-imagens .item span,
+    .grid-imagens .item h3 {
+   
+      font-size: 12px; /* tamanho ajustado */
+      line-height: 1.2;
+      white-space: normal; /* permite quebra de linha */
+      word-wrap: break-word;
+      text-align: center;
+}
+
+    
+    /* CARROSSEL */
+    .carrosel-track {
+        gap: 15px;
+    }
+    
+    .item {
+        min-width: 140px; /* Reduz a largura mínima do carrossel */
+    }
+    
+    .ofertas h2 {
+        font-size: 24px;
+        padding: 15px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    header input[type="search"] {
+        height: 28px;
+        font-size: 12px;
+    }
+
+    header .search-bar {
+        max-width: 260px;
+    }
+}
+
+
+/* =======================================
+ * RODAPÉ
+ * ======================================= */
+footer {
+    background-color: #0f7516;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer nav {
+    margin-top: 12px;
+}
+
+footer input[type="file"] {
+    background: #0f7516;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 6px;
+}
+
+footer input[type="submit"] {
+    background: #ffffff;
+    border: none;
+    border-radius: 6px;
+    color: #000;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+footer input[type="submit"]:hover {
+    background: #b0aaaa;
+}
